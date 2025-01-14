@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Stats } from "./components/Stats";
+import { OpenPositions } from "./components/OpenPositions";
+import { ContactForm } from "./components/ContactForm";
 
 const queryClient = new QueryClient();
 
@@ -27,8 +29,8 @@ const App = () => (
                 </>
               }
             />
-            <Route path="/jobs" element={<div>Jobs Page</div>} />
-            <Route path="/contact" element={<div>Contact Page</div>} />
+            <Route path="/jobs" element={<OpenPositions />} />
+            <Route path="/contact" element={<ContactForm />} />
           </Routes>
         </div>
       </BrowserRouter>
